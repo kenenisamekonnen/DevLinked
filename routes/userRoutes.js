@@ -1,6 +1,6 @@
 import { Router } from "express";
 import Users from "../models/Users.js";
-import { register } from "../controllers/auth.controller.js";
+import { register, login } from "../controllers/auth.controller.js";
 import { getUsers } from "../controllers/users.controller.js";
 
 const router = Router();
@@ -16,4 +16,5 @@ const router = Router();
 
 router.post("/register", register);
 router.get("/users", getUsers);
+router.post("/login", login);
 export default router;
